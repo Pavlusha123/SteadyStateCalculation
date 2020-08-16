@@ -84,10 +84,7 @@ namespace SteadyStateCalculation
 
         public static Complex operator *(double factor, Complex num1)
         {
-            Complex result = new Complex();
-
-            result.Real = num1.Real * factor;
-            result.Image = num1.Image * factor;
+            Complex result = num1 * factor;
 
             return result;
         }
