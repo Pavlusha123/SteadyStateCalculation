@@ -475,7 +475,9 @@ namespace SteadyStateCalculation
                 if (EuqlidianNormN_0 < EuqlidianNorm) counter++;
                 if ((counter > 3)|(step>20))
                 {
+                    Console.ForegroundColor = ConsoleColor.Red;
                     Console.WriteLine("Режим расходится, необходимо введение в допустимую область");
+                    Console.ResetColor();
                     return NodesVoltage;
                 }
 

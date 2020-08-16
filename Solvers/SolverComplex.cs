@@ -202,12 +202,16 @@ namespace SteadyStateCalculation
                 if (EuqlidianNormN_0 < EuqlidianNorm) counter++;
                 if (counter>50)
                 {
+                    Console.ForegroundColor = ConsoleColor.Red;
                     Console.WriteLine("Режим расходится, необходимо введение в допустимую область");
+                    Console.ResetColor();
                     return NodesVoltage;
                 }
                 if (step>=500)
                 {
+                    Console.ForegroundColor = ConsoleColor.Red;
                     Console.WriteLine("Расчет завершился, достигнуто максимальное количество итераций");
+                    Console.ResetColor();
                     return NodesVoltage;
                 }
             }

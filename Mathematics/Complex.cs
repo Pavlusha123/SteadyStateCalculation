@@ -123,6 +123,22 @@ namespace SteadyStateCalculation
             else return true;
         }
 
+        public override bool Equals(object obj)
+        {
+            return obj is Complex complex &&
+                   module == complex.module &&
+                   angle == complex.angle &&
+                   Real == complex.Real &&
+                   Image == complex.Image &&
+                   Module == complex.Module &&
+                   Angle == complex.Angle;
+        }
+
+        public override int GetHashCode()
+        {
+            return HashCode.Combine(module, angle, Real, Image, Module, Angle);
+        }
+
 
         public static Complex Conjugate(Complex num)
         {
@@ -144,5 +160,6 @@ namespace SteadyStateCalculation
                 return $"{this.Real:0.####}+j{this.Image:0.####}";
             }
         }
+
     }
 }

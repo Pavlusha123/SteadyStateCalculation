@@ -362,7 +362,7 @@ namespace SteadyStateCalculation
                     MultiplyRow(JointMatrix, i, GaussMatrix.matrix[i, i]);
                     MultiplyRow(GaussMatrix, i, GaussMatrix.matrix[i, i]);
                 }
-                return (JointMatrix); //Почему не на матрицу перестановок!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+                return (JointMatrix); //Почему не на матрицу перестановок?
 
                 static int FindNotZero(Matrix GaussMatrix, int currentRow, int currentColumn, bool direction)
                 {

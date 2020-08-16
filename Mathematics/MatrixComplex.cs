@@ -277,7 +277,7 @@ namespace SteadyStateCalculation
                     MultiplyRow(JointMatrix, i, GaussMatrix.matrix[i, i]);
                     MultiplyRow(GaussMatrix, i, GaussMatrix.matrix[i, i]);
                 }
-                return (JointMatrix); //Почему не на матрицу перестановок!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+                return (JointMatrix); //Почему не на матрицу перестановок?
 
                 static int FindNotZero(MatrixComplex GaussMatrix, int currentRow, int currentColumn, bool direction)
                 {
@@ -312,32 +312,6 @@ namespace SteadyStateCalculation
                     return row;
                 }
 
-
-                //for (int j=0;j<GaussMatrix.GetColumns;j++)
-                //{
-                //    for(int i=j+1;i<GaussMatrix.GetRows;i++)
-                //    {
-                //        if (i == j) continue;
-                //        SummRows(JointMatrix, j, i, (-1.0)*GaussMatrix.matrix[i, j] / GaussMatrix.matrix[j, j]);
-                //        SummRows(GaussMatrix, j, i, (-1.0) * GaussMatrix.matrix[i, j] / GaussMatrix.matrix[j, j]);
-                //    }
-                //}
-                //for(int j=GaussMatrix.GetColumns-1;j>-1;j--)
-                //{
-                //    for(int i=j-1;i>-1;i--)
-                //    {
-                //        if (i == j) continue;
-                //        SummRows(JointMatrix, j, i, (-1.0) * GaussMatrix.matrix[i, j] / GaussMatrix.matrix[j, j]);
-                //        SummRows(GaussMatrix, j, i, (-1.0) * GaussMatrix.matrix[i, j] / GaussMatrix.matrix[j, j]);
-                //    }
-                //}
-                //for(int i=0;i<GaussMatrix.GetRows;i++)
-                //{
-                //    MultiplyRow(JointMatrix, i, GaussMatrix.matrix[i, i]);
-                //    MultiplyRow(GaussMatrix, i, GaussMatrix.matrix[i, i]);
-                //}
-                //Console.WriteLine("Success!");
-                //return JointMatrix;
             }
         }
 
